@@ -25,9 +25,9 @@ numPoints=100000
 t=np.linspace(start, end, num=numPoints)
 dt= t[1]-t[0]
 
-for step in range(0,numPoints-1): # forward Euler's method
-    timeNow=step*dt
-    vel.append(vel[step]+ dt*y2(timeNow,phi[step]))
-    phi.append(phi[step]+dt*y1(timeNow,vel[step]))
+for i in range(0,numPoints-1): # forward Euler's method
+    timeNow=i*dt
+    vel.append(vel[i]+ dt*y2(timeNow,phi[i]))
+    phi.append(phi[i]+dt*y1(timeNow,vel[i]))
 plt.plot(t,phi)
 plt.show()
