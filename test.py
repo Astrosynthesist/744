@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 #system parameters
 g=1
 l=1
-w=0
+w=0.1
 R=0.2
 
 #setting intial condtions
@@ -20,7 +20,7 @@ def y2(t,y):
 
 # setting time step and integration limits
 start=0
-end=100
+end=20
 numPoints=100000
 t=np.linspace(start, end, num=numPoints)
 dt= t[1]-t[0]
